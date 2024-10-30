@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MusicPlayer from './MusicPlayer';
 
 function App() {
+    const [songName, setSongName] = useState("song.mp3");
     return (
         <div className="App">
-            <MusicPlayer />
+            <button onClick={() => setSongName("song2.mp3")} > SWITCH SONG {songName} </button>
+            <Playlist onSelected={(song) => xxxx}/> /////////////////////////////////////////
+            <MusicPlayer song={songName}/>
         </div>
     );
 }
